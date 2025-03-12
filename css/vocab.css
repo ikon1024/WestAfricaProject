@@ -1,0 +1,23 @@
+/* Popup definition styling */
+.vocab-word {
+    position: relative;
+    cursor: pointer;
+    color: #007BFF; /* Blue color for vocabulary words */
+    text-decoration: underline;
+}
+
+.vocab-popup {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 1000;
+}
+
+.vocab-word:hover .vocab-popup {
+    display: block;
+}

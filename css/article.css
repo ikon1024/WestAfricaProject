@@ -1,0 +1,103 @@
+@import url("default.css");
+@import url("navbar.css");
+@import url("sidebar.css");
+@import url("vocab.css");
+
+/* Book-like page layout (flat and 2D) */
+.book-page {
+    display: flex;              /* Set up Flexbox for book-page */
+    flex-direction: column;     /* Default to vertical layout */
+    justify-content: flex-start;
+    
+    align-items: center;        /* Center items horizontally */
+
+    max-width: 768px;           /* Max width of 600px */
+    width: 100%;                /* Ensure it takes the full width of its container */
+
+}
+
+
+/* Layout for horizontal display */
+.a-horizontal {
+    display: flex;               /* Use Flexbox to align elements */
+    flex-direction: row;         /* Align items horizontally */
+    align-items: flex-start;
+    gap: 20px;                   /* Add space between image and text */
+}
+
+/* Layout for vertical display */
+.a-vertical {
+    display: flex;               /* Use Flexbox to align elements */
+    flex-direction: column;      /* Stack items vertically */
+    align-items: center;         /* Horizontally center the items */
+    gap: 20px;                   /* Add space between image and text */
+}
+
+/* Image container */
+.image-container {
+    max-width: 250px;  /* Max width for the image */
+}
+
+.africa-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Text container */
+.text-container {
+    max-width: 400px;  /* Limit max width for text */
+}
+
+/* Utility Classes */
+.textbook-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.textbook-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.textbook-caption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+
+}
+
+
+
+/* Make layout responsive for mobile */
+@media (max-width: 768px) {
+    .book-page {
+        flex-direction: column;  /* Change to a column layout on smaller screens */
+        text-align: center;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
+
+    .text-container {
+        text-align: left;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Make layout responsive for mobile */
+@media (max-width: 400px) {
+    p {
+        font-size: 12px;
+    }
+}

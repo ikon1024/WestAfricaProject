@@ -1,0 +1,62 @@
+@import url("global.css");
+
+/* Navigation bar styles */
+nav {
+    position: relative;
+    padding: 20px 16px;
+    border-bottom: 1px solid black;
+    background-color: var(--navbar-color);
+    z-index: 10;
+}
+
+nav h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-right: 20px; /* Spacing between navbar items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease; /* Smooth transition for transform */
+}
+
+nav ul li a:hover {
+    transform: translateY(1px) rotate(0.5deg); /* Slightly raise and tilt */
+}
+
+
+/* Create the progress-bar-like underline effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+
+/* On hover, expand the underline from 0 to 100% */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.hamburger-text {
+    background-color: red;
+}
